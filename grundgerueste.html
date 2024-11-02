@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Mental Training Enzendorfer</title>
+
+    <!-- Link css to html -->
+    <link rel="stylesheet" href="styles/basic-style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Flexbox Layouts</h1>
+    <div class="switch-container">
+        <input type="checkbox" id="mode-switch" class="mode-switch">
+        <label for="mode-switch" class="switch-label">
+            <div class="text day-text">DAY MODE</div>
+            <div class="toggle">
+                <div class="icon">
+                    <img src="./assets/icons/icon-sun.png" alt="Day Mode Icon" id="toggle-icon">
+                </div>
+            </div>
+            <div class="text night-text">NIGHT MODE</div>
+        </label>
+    </div>
+
+    <script>
+        const checkbox = document.getElementById('mode-switch');
+        const icon = document.getElementById('toggle-icon');
+        const dayText = document.querySelector('.day-text');
+        const nightText = document.querySelector('.night-text');
+
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                // Change to Night Mode
+                icon.src = './assets/icons/icon-moon.png';
+                dayText.style.display = 'none';
+                nightText.style.display = 'block';
+            } else {
+                // Change to Day Mode
+                icon.src = './assets/icons/icon-sun.png';
+                dayText.style.display = 'block';
+                nightText.style.display = 'none';
+            }
+        });
+    </script>
+
+
+    <!-- Version 1: Zwei Elemente, gleiche Breite mit Lücke -->
+    <div class="parent version-1">
+        <div class="child">Element 1</div>
+        <div class="child">Element 2</div>
+    </div>
+
+    <!-- Version 2-1: Ein Element 1/3, das andere 2/3 (1/3 links) -->
+    <div class="parent version-2-1">
+        <div class="child">Element 1 (1/3)</div>
+        <div class="child">Element 2 (2/3)</div>
+    </div>
+
+    <!-- Version 2-2: Ein Element 1/3, das andere 2/3 (1/3 rechts) -->
+    <div class="parent version-2-2">
+        <div class="child">Element 1 (2/3)</div>
+        <div class="child">Element 2 (1/3)</div>
+    </div>
+
+    <!-- Version 3: Drei Elemente, gleiche Breite -->
+    <div class="parent version-3">
+        <div class="child">Element 1</div>
+        <div class="child">Element 2</div>
+        <div class="child">Element 3</div>
+    </div>
+
+    <!-- Version 4: Vier Elemente, gleiche Breite -->
+    <div class="parent version-4">
+        <div class="child">Element 1</div>
+        <div class="child">Element 2</div>
+        <div class="child">Element 3</div>
+        <div class="child">Element 4</div>
+    </div>
+
+    <!-- Version 5: Fünf Elemente, gleiche Breite -->
+    <div class="parent version-5">
+        <div class="child">Element 1</div>
+        <div class="child">Element 2</div>
+        <div class="child">Element 3</div>
+        <div class="child">Element 4</div>
+        <div class="child">Element 5</div>
+    </div>
+</body>
+</html>

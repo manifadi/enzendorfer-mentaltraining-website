@@ -1,0 +1,1078 @@
+:root{
+    --light-green: #5B9B74;
+    --light-light-green: #CCE0D4;
+    --font-color: #1e1e1e;
+    --background-color: #f5f5f5;
+    --dark-font: #f5f5f5;
+    --dark-background: #282828;
+
+    --headline-font-size: clamp(16px, 2.2dvw, 26px);
+    --headline-span-font-size: clamp(26px, 3dvw, 36px);
+    --paragraph-font-size: clamp(13px, 1.5dvw, 17px);
+
+    --desktop-menu-font-size: clamp(12px, 1.3dvw, 18px);
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+    font-size: var(--paragraph-font-size);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100dvw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 1em 1em;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-font);
+}
+
+.parent {
+    border-radius: 0.5em;
+    padding: 1em;
+    display: flex;
+    gap: clamp(1em, 12dvw, 5em);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* VERSIONEN FÜR FLEXBOXEN */
+/* Version 1: Zwei Elemente, gleiche Breite mit Lücke */
+.version-1 {
+    gap: 1em; /* Abstand zwischen den Elementen */
+}
+
+.version-1 > .child {
+    flex: 1; /* Gleiche Breite für beide Kinder */
+}
+
+/* Version 2: Ein Element 1/3, das andere 2/3 */
+.version-2-1 > .child:first-child {
+    flex: 1; /* 1/3 der Breite */
+}
+.version-2-1 > .child:last-child {
+    flex: 2; /* 2/3 der Breite */
+}
+
+.version-2-2 > .child:first-child {
+    flex: 2; /* 2/3 der Breite */
+}
+.version-2-2 > .child:last-child {
+    flex: 1; /* 1/3 der Breite */
+}
+
+/* Version 3: Drei Elemente, gleiche Breite */
+.version-3 > .child {
+    flex: 1;
+    margin-right: 1em;
+}
+.version-3 > .child:last-child {
+    margin-right: 0;
+}
+
+/* Version 4: Vier Elemente, gleiche Breite */
+.version-4 .child {
+    flex: 1;
+    margin-right: 1em;
+}
+.version-4 .child:last-child {
+    margin-right: 0;
+}
+
+/* Version 5: Fünf Elemente, gleiche Breite */
+.version-5 .child {
+    flex: 1;
+    margin-right: 1em;
+}
+.version-5 .child:last-child {
+    margin-right: 0;
+}
+/* ENDE DER VERSIONEN */
+
+.menu-bar{
+    display: none;
+}
+
+.main-image{
+    height: calc(100dvh - 2.5em);
+    background: url('../assets/background-images/Person\ auf\ Grasfeld\ Kopie.jpg') no-repeat center/cover;
+    border-radius: .5em;
+    color: var(--background-color);
+    position: relative;
+}
+
+.main-image .mobile-menu{
+    flex-direction: row;
+    padding: .75em;
+}
+
+.main-image .mobile-menu .logo-image-mobile img{
+    width: 40dvw;
+}
+
+.main-image .light-switch{
+    position: relative;
+}
+
+.main-image .switch-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.main-image .switch-container .mode-switch-mobile {
+    display: none;
+}
+
+.main-image .switch-container .mode-switch-mobile:checked + .switch-label .toggle {
+    left: calc(100% - 32px); 
+}
+
+.main-image .switch-container .mode-switch-mobile:checked + .switch-label {
+    background-color: #333;
+}
+
+.main-image .switch-container .mode-switch-mobile:checked ~ .icon img {
+    filter: invert(1); /* Invertiert das Bild für Nachtmodus */
+}
+
+.main-image .switch-container .switch-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    height: 34px;
+    width: 54px;
+    background-color: rgb(208, 208, 208);
+    border-radius: 15em;
+    padding: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-image .switch-container .toggle {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    transition: left 0.4s ease; /* Hinzufügen einer Transition für left und right */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-image .switch-container .icon img {
+    margin-top: 10%;
+    width: 70%;
+    height: 70%;
+}
+
+/* Dark Mode für Mobile Switch */
+body.dark-mode .main-image .switch-container .switch-label {
+    background-color: #333;
+}
+
+.main-image .headlines{
+    flex-direction: column;
+    position: absolute;
+    bottom: 2dvh;
+    left: 0;
+    right: 0;
+}
+
+.main-image .headlines .title{
+    text-transform: uppercase;
+}
+
+.main-image .headlines .title h2{
+    font-size: 5.3dvw;
+}
+
+.main-image .headlines .title h2 span{
+    font-size: 12dvw;
+    font-style: italic;
+}
+
+.main-image .headlines .benefits{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.main-image .headlines .benefits h4{
+    font-size: var(--headline-font-size);
+    background-color: var(--light-green);
+    font-weight: 800;
+    padding: 0.2em .6em;
+    display: inline-block;
+    margin: 0;
+}
+
+.benefits-content {
+    color: var(--background-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefits-content p {
+    width: 100%;
+    transition: transform 0.45s ease-in-out;
+}
+
+.aboutme{
+    margin-top: 7.5vh;
+}
+
+.aboutme > .parent > .desktop-picture{
+    display: none;
+}
+
+.h2-headline{
+    text-align: center;
+    font-size: var(--headline-font-size);
+}
+
+.h2-headline span{
+    color: var(--light-green);
+    font-size: var(--headline-span-font-size);
+}
+
+.aboutme .aboutme-text{
+    text-align: left;
+    border-radius: .5em;
+    background-image: url("../assets/background-images/simon-picture-big.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--background-color);
+    min-height: 50dvw;
+}
+
+.aboutme .aboutme-text .child:last-child{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.aboutme .aboutme-text .child:last-child *{
+    width: 100%;
+}
+
+.aboutme .aboutme-text h3 span, p{
+    text-transform: none;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.aboutme .aboutme-description{
+    font-style: normal;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.services{
+    margin-top: 7.5vh;
+    background-color: var(--light-light-green);
+    border-radius: .5em;
+    padding: 2em .75em;
+    color: var(--font-color);
+}
+
+.services p{
+    text-align: center;
+    transform: translateY(-1dvh);
+}
+
+/* Styles für das services-Element und seine Kinder */
+.services .parent.skill-palette {
+    display: flex;
+    flex-wrap: wrap; /* Verhindert Zeilenumbruch */
+    gap: 1.4em; /* Abstand zwischen den child-Elementen */
+    justify-content: center;
+    overflow-x: auto; /* Falls zu wenig Platz da ist, kann man horizontal scrollen */
+    margin-bottom: 1em;
+}
+
+.services .parent.skill-palette .child.skill {
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 35dvw;
+    max-width: 35dvw; /* Optional: Maximale Breite festlegen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color); /* Heller Hintergrund */
+    padding: 10px;
+    border-radius: .35em;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+}
+
+.services .parent.skill-palette .child.skill:hover{
+    cursor: pointer;
+}
+
+/* Bildgrößenanpassung für die Symbole innerhalb der child-Elemente */
+.services .parent.skill-palette .child.skill img {
+    width: clamp(20px, 30%, 40px);
+    height: clamp(20px, 30%, 40px);
+}
+
+/* Titel und Underline-Styling */
+.services .parent.skill-palette .child.skill h4 {
+    font-size: clamp(7px, 2.2dvw, 10px);
+    font-weight: 500;
+    word-wrap: break-word;
+    margin-block-start: .85em;
+    margin-block-end: 0;
+}
+
+.services .parent.skill-palette .child.skill .underline {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    background-color: #aaa; /* Farbe für inaktive Underlines */
+}
+
+.services .parent.skill-palette .child.skill.active .underline{
+    background-color: var(--light-green);
+}
+
+.services .skill-info{
+    text-align: justify;
+}
+
+.services .skill-info .skill-title{
+    display: none;
+}
+
+.services .skill-info .skill-description{
+    font-weight: 300;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.services .skill-info .skill-description.fade-out {
+    opacity: 0;
+}
+
+.contact{
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact h2, .contact h2 span{
+    font-size: var(--headline-span-font-size);
+    /* Add this to ensure both use the exact same size */
+    line-height: 1;
+}
+
+.contact h2 span{
+    color: var(--light-green);
+}
+
+.contact .contact-form-container{
+    width: 100%;
+}
+
+.contact .contact-form{
+    width: 100%;
+    text-align: left;
+}
+
+.contact .contact-form input, textarea{
+    width: 100%;
+    background-color: #ededed;
+    padding: 1em .75em;
+    outline: none;
+    border: none;
+    border-bottom: .25em solid #cfcfcf;
+    margin: .3em 0;
+    resize: none;
+}
+
+.contact .contact-form button{
+    border: none;
+    outline: none;
+    color: var(--background-color);
+    background-color: var(--light-green);
+    padding: .75em 2em;
+    border-radius: .35em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.contact .map{
+    border-radius: .5em;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-top: 1em;
+}
+
+.contact .map iframe{
+    max-width: 100%;
+}
+
+.footer{
+    background-color: var(--dark-background);
+    color: var(--background-color);
+    text-align: left;
+    margin-top: 2em;
+    flex: unset;
+    justify-content: space-evenly;
+}
+
+.footer .child{
+    flex: 0 auto;
+}
+
+.footer > .child:first-child, .child:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer img{
+    width: 10vw;
+    max-width: 65px;
+}
+
+.footer .footer-text img{
+    height: 12px;
+    width: unset;
+    margin-right: .5em;
+}
+
+.footer .footer-text a{
+    color: var(--background-color);
+    text-decoration: none;
+}
+
+.footer .socials{
+    flex-direction: column;
+    gap: 1em;
+}
+
+.footer .socials img{
+    width: 7vw;
+    max-width: 40px;
+    margin: .4em;
+}
+
+body.dark-mode .footer{
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+body.dark-mode .footer img{
+    filter: invert(1);
+}
+
+body.dark-mode .footer a{
+    color: var(--font-color);
+}
+
+.clickable:hover{
+    cursor: pointer;
+}
+
+.left-side-out {
+    transform: translateY(140%);
+}
+.right-side-out {
+    transform: translateY(-140%);
+}
+.slide-center {
+    transform: translateX(0);
+}
+.eliminate-transition {
+    transition: none !important;
+}
+
+/****************************************/
+/**      BREAK POINT FOR SERVICES      **/
+/****************************************/
+@media screen and (min-width: 550px) {
+    .services .parent.skill-palette {
+        flex-wrap: nowrap;
+        gap: 2dvw;
+        justify-content: space-evenly;
+    }
+
+    .services .parent.skill-palette .child.skill {
+        flex: 1 1 20dvw;
+        aspect-ratio: 1 / 1;
+        max-width: 130px;
+        word-wrap: break-word;
+    }
+}
+
+/****************************************/
+/**      BREAK POINT FOR:              **/
+/**                       About Me      */
+/**                       Contact Form  */
+/****************************************/
+@media screen and (min-width: 700px) {
+    .aboutme{
+        justify-content: space-evenly;
+    }
+
+    .aboutme .aboutme-text{
+        display: none;
+    }
+
+    .aboutme > .parent > .child:first-child{
+        max-width: 900px;
+    }
+
+    .aboutme .h2-headline{
+        text-align: left;
+    }
+
+    .aboutme > .parent > .desktop-picture{
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        border-radius: .5em;
+        background-color: var(--light-light-green);
+        max-width: 400px;
+    }
+
+    .aboutme > .parent > .desktop-picture > img{
+        width: 100%;
+    }
+
+    .contact{
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+
+    .contact .map{
+        width: clamp(0px, 100%, 290px);
+        aspect-ratio: 1 / 1;
+        max-width: 290px;
+    }
+
+    .contact .form{
+        text-align: left;
+        max-width: 525px;
+    }
+
+    .footer .socials{
+        flex-direction: row;
+    }
+}
+
+/****************************************/
+/**      BREAK POINT FOR:              **/
+/**                       Title Screen  */
+/****************************************/
+@media screen and (min-width: 1025px) {
+    .menu-bar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-bar .child{
+        flex: 0 auto;
+        max-width: fit-content;
+    }
+
+    .menu-bar > .child > img {
+        min-height: 50px;
+        height: 6vw;
+        max-height: 80px;
+    }
+
+    ul.menu {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+    }
+
+    ul.menu li a {
+        text-decoration: none;
+        color: var(--font-color);
+        font-weight: bold;
+        padding: 5px;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    body.dark-mode ul.menu li a{
+        color: var(--dark-font);
+    }
+
+    ul.menu li a::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--font-color);
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    ul.menu li a:hover::before {
+        visibility: visible;
+        width: 100%;
+    }
+
+    .switch-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .mode-switch {
+        display: none;
+    }
+
+    .switch-label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        height: 40px;
+        background-color: rgb(208, 208, 208);
+        border-radius: 15em;
+        padding: 2px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .text {
+        font-weight: bold;
+        color: #333;
+        user-select: none;
+    }
+
+    .day-text {
+        padding: 0 10px 0 42px;
+    }
+
+    .night-text {
+        display: none;
+        padding: 0 42px 0 10px;
+        color: var(--dark-font)
+    }
+
+    .toggle {
+        position: absolute;
+        top: 50%;
+        left: 2px;
+        transform: translateY(-50%);
+        width: 36px;
+        height: 36px;
+        background-color: var(--background-color);
+        border-radius: 50%;
+        transition: left 0.4s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon img {
+        margin-top: 10%;
+        width: 70%;
+        height: 70%;
+    }
+
+    .mode-switch:checked + .switch-label .toggle {
+        left: calc(100% - 38px); /* Adjust based on padding */
+    }
+
+    .mode-switch:checked + .switch-label {
+        background-color: #333;
+    }
+
+    /**   END OF DESKTOP MENU   **/
+
+    .main-image .mobile-menu{
+        display: none;
+    }
+
+    .main-image .child {
+        color: white;
+        padding: 1em;
+        border-radius: 0.25em;
+    }
+
+    .version-3 .child {
+        flex: 1;
+    }
+
+    .main-image {
+        height: 80vh;
+        background: url('../assets/background-images/Person\ auf\ Grasfeld\ Kopie.jpg') no-repeat center/cover;
+        padding: 1em 3em;
+        position: relative;
+        overflow: hidden;
+        border-radius: .5em;
+    }
+
+    .main-image .child{
+        text-align: left;
+    }
+
+    .main-image .headlines{
+        position: relative;
+        height: 100%;
+        flex-direction: row;
+    }
+
+    .main-image .headlines .child{
+        height: 100%;
+    }
+
+    .main-image .headlines .child:nth-child(1) {
+        flex: 2;
+        align-content: center;
+        align-items: center;
+    }
+
+    .main-image .headlines .child:nth-child(2) {
+        flex: 1;
+        position: relative;
+    }
+
+    .main-image .headlines .child:nth-child(3) {
+        flex: 2;
+    }
+
+    .main-image .child:first-child h2, 
+    .main-image .child:first-child h3 {
+        font-weight: 700;
+        transform: translateY(35%);
+        font-size: clamp(20px, 3.5dvw, 30px);
+    }
+
+    .main-image .child:first-child h2 {
+        font-size: clamp(26px, 3dvw, 38px);
+        font-style: italic;
+        transform: none;
+    }
+
+    .main-image .child:first-child h2 span{
+        font-size: clamp(44px, 5.5dvw, 72px);
+    }
+
+    .main-image .child .scroll-arrow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        cursor: pointer;
+        padding: 1em;
+        width: fit-content;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+        animation: arrow-bounce-animation 5s infinite;
+    }
+
+    .main-image .child .scroll-arrow a{
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        padding: 1em;
+    }
+
+    .main-image .child .scroll-arrow .arrow-part {
+        width: 20px;
+        height: 3px;
+        background-color: var(--dark-font);
+        border-radius: 1.5px;
+    }
+
+    .main-image .child .scroll-arrow .arrow-part:first-child {
+        transform: translate(-30%, 3px) rotate(45deg);
+    }
+
+    .main-image .child .scroll-arrow .arrow-part:last-child {
+        transform: translate(30%, 0) rotate(-45deg);
+    }
+
+    .main-image h1{
+        font-style: italic;
+        font-weight: 900;
+        position: absolute;
+        text-transform: uppercase;
+        bottom: -150px;
+        font-size: 9.4dvw;
+        opacity: .4;
+        color: var(--dark-font);
+    }
+
+    .benefits{
+        padding: 0 1em;
+    }
+
+    .benefits h4{
+        padding: 0.5em 1em;
+        width: fit-content;
+        background-color: var(--light-green);
+    }
+
+    .benefits-dots {
+        margin-top: 2em;
+        text-align: center;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .dot {
+        /* Increase the clickable area by adding padding */
+        padding: 12px;
+        /* Position the actual dot using pseudo-element */
+        position: relative;
+        /* Remove existing height/width */
+        cursor: pointer;
+        /* Make the entire area clickable */
+        display: inline-block;
+        margin: 0 1%;
+    }
+    
+    /* Create the actual dot using a pseudo-element */
+    .dot::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: .4em;
+        width: .4em;
+        background-color: grey;
+        border-radius: 50%;
+        outline: .05em solid grey;
+        outline-offset: 2px;
+        transition: background-color 0.3s;
+    }
+    
+    /* Update the active state to target the pseudo-element */
+    .dot.active::before {
+        background-color: var(--background-color);
+        outline-color: var(--background-color);
+    }
+
+    .left-side-out {
+        transform: translateX(-110%);
+    }
+    .right-side-out {
+        transform: translateX(110%);
+    }
+
+    .text-aboutme{
+        text-align: left;
+    }
+
+    /***   ANPASSEN DER WEITEN AUF DESKTOP SICH   ***/
+    .main-image, .services, .footer{
+        width: calc(100dvw - 3em);
+    }
+
+    .services .parent.skill-palette {
+        flex-wrap: nowrap;
+        gap: unset;
+        justify-content: space-evenly;
+    }
+
+    .services .parent.skill-palette .child.skill {
+        flex: 1 1 20dvw;
+        aspect-ratio: 1 / 1;
+        max-width: 145px;
+        word-wrap: break-word;
+    }
+
+    /* Bildgrößenanpassung für die Symbole innerhalb der child-Elemente */
+    .services .parent.skill-palette .child.skill img {
+        width: clamp(20px, 40%, 46px);
+        height: clamp(20px, 40%, 46px);
+    }
+
+    /* Titel und Underline-Styling */
+    .services .parent.skill-palette .child.skill h4 {
+        font-size: .75em;
+    }
+
+    .services .skill-info{
+        padding: 1em 0;
+        justify-content: center;
+    }
+
+    .services .skill-info .skill-title{
+        display: block;
+        max-width: fit-content;
+        flex: 0 0 33.33%;
+        width: 33.33%;
+        word-break: break-all;
+    }
+
+    .services .skill-info .h2-headline{
+        position: relative;
+        text-align: left;
+        overflow: hidden;
+        font-size: clamp(1em, 1.8vw, 24px);
+    }
+
+    .services .skill-info .h2-headline span {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform 0.4s ease, opacity 0.3s ease;
+    }
+    
+    .services .skill-info .h2-headline span.animate-out {
+        transform: translateY(-110%);
+        opacity: 0;
+    }
+
+    .services .skill-info .h2-headline span.animate-in {
+        transform: translateY(110%);
+    }
+
+    .services .skill-info .skill-description{
+        text-align: left;
+        justify-content: left;
+        flex: 0 0 66.66%;
+        word-wrap: break-word;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .services .skill-info .skill-description.fade-out {
+        opacity: 0;
+    }
+
+    .contact .map{
+        width: clamp(0px, 100%, 360px);
+        aspect-ratio: 1.3 / 1;
+        max-width: 360px;
+    }
+
+    .widerpadding {
+        padding: 1em 4em;
+    }
+
+    .back-to-top:hover {
+        background-color: var(--light-green);
+    }
+
+    .back-to-top:hover .arrow-part {
+        background-color: var(--background-color);
+    }
+
+    .back-to-top:hover span {
+        color: var(--background-color);
+    }
+}
+
+@keyframes arrow-bounce-animation {
+	0%, 35%, 50%, 65%, 100% {transform: translateY(0);}
+	45% {transform: translateY(-30px);}
+	55% {transform: translateY(-15px);}
+}
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid var(--light-green);
+    border-radius: 50%;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top .arrow {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-bottom: 2px;
+}
+
+.back-to-top .arrow-part {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    border-radius: 1em;
+    background-color: var(--light-green);
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top .arrow-part:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    transform: translate(-34%, -100%) rotate(45deg);
+    transform-origin: right center;
+}
+
+.back-to-top .arrow-part:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%) rotate(-90deg);
+}
+
+.back-to-top .arrow-part:nth-child(3) {
+    width: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-66%, -100%) rotate(-45deg);
+    transform-origin: left center;
+}
+
+.back-to-top span {
+    font-size: 0.75rem;
+    color: var(--light-green);
+    transition: color 0.3s ease;
+}
+
+/* Dark mode support */
+body.dark-mode .back-to-top {
+    background-color: var(--dark-background);
+    border-color: var(--light-green);
+}

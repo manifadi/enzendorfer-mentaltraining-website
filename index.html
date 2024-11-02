@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Mental Training Enzendorfer</title>
+
+    <!-- Link css to html -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="parent version-3 menu-bar">
+        <div class="child"><img src="./assets/logos/enzendorfer-logo@png.png" id="logo-image" alt="enzendorfer-logo" class="clickable"></div>
+        <div class="child">
+            <ul class="menu">
+                <li><a href="#scroll-aboutme" class="clickable">Über mich</a></li>
+                <li><a href="#scroll-services" class="clickable">Meine Dienstleistungen</a></li>
+                <li><a href="#scroll-contact" class="clickable">Kontakt</a></li>
+                <li><a href="#" class="clickable">Preisliste</a></li>
+            </ul>            
+        </div>
+        <div class="child">
+            <div class="switch-container clickable">
+                <input type="checkbox" id="mode-switch" class="mode-switch">
+                <label for="mode-switch" class="switch-label">
+                    <div class="text day-text">DAY MODE</div>
+                    <div class="toggle">
+                        <div class="icon">
+                            <img src="./assets/icons/icon-sun.png" alt="Day Mode Icon" id="toggle-icon">
+                        </div>
+                    </div>
+                    <div class="text night-text">NIGHT MODE</div>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-image">
+        <div class="parent version-1 mobile-menu">
+            <div class="child logo-image-mobile">
+                <img src="./assets/logos/enzendorfer-logo-white.png" alt="enzendorfer-logo">
+            </div>
+            <!-- Mobile Dark-Light-Mode Switch -->
+            <div class="child light-switch">
+                <div class="switch-container">
+                    <input type="checkbox" id="mode-switch-mobile" class="mode-switch-mobile">
+                    <label for="mode-switch-mobile" class="switch-label">
+                        <div class="toggle">
+                            <div class="icon">
+                                <img src="./assets/icons/icon-sun.png" alt="Day Mode Icon" id="toggle-icon-mobile">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Version 3: Drei Elemente, gleiche Breite -->
+        <div class="parent version-3 headlines">
+            <div class="child title"><h2>Entdecke dein richtiges<br><span>Selbst!</span></h2></div>
+            <div class="child">
+                <div class="scroll-arrow clickable">
+                    <a href="#scroll-aboutme">
+                        <div class="arrow-part"></div>
+                        <div class="arrow-part"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="child benefits">
+                <h4>BENEFITS</h4>
+                <div class="benefits-content">
+                    <p id="benefit-text"></p>
+                </div>
+                <div class="benefits-dots">
+                    <span class="dot active" onclick="animateBenefit(0)"></span>
+                    <span class="dot" onclick="animateBenefit(1)"></span>
+                    <span class="dot" onclick="animateBenefit(2)"></span>
+                    <span class="dot" onclick="animateBenefit(3)"></span>
+                    <span class="dot" onclick="animateBenefit(4)"></span>
+                </div>
+            </div>
+        </div>
+        <!--<h1>Mentaltraining</h1>-->
+    </div>
+
+    <div class="aboutme widerpadding" id="scroll-aboutme">
+        <div class="parent version-2-2">
+            <div class="child">
+                <h2 class="h2-headline">Damit du weißt, mit wem<br><span>Du's zu tun hast</span></h2>
+                <div class="parent version-2-1 aboutme-text">
+                    <div class="child"></div>
+                    <div class="child">
+                        <h3>Simon Enzendorfer<br><span>Zertifizierter Mentaltrainer</span></h3>
+                        <p class="zitat">"Dein Geist ist das mächtigste Werkzeug, das du besitzt. Wenn du lernst ihn zu beherrschen, gibt es keine Grenzen für das, was du erreichen kannst!"</p>
+                    </div>
+                </div>
+                <p class="aboutme-description">
+                    Mein Name ist Simon, und ich arbeite als leidenschaftlicher Mentalcoach mit dem Ziel, Menschen dabei zu unterstützen, ihr volles Potenzial zu entfalten. Mit meiner langjährigen Erfahrung im Bereich der Persönlichkeitsentwicklung helfe ich meinen Klienten, mentale Blockaden zu lösen und ein starkes, positives Mindset zu entwickeln. Neben meiner Arbeit als Coach bin ich aktiver Kickboxer, was mir hilft, Disziplin, Fokus und körperliche Stärke in mein Leben zu integrieren. Die Kombination aus mentaler und körperlicher Fitness ermöglicht es mir, einen ganzheitlichen Ansatz in meiner Arbeit zu verfolgen und meine Klienten auf ihrem Weg zu mehr Selbstbewusstsein und innerer Stärke zu begleiten.
+                </p>
+            </div>
+            <div class="child desktop-picture">
+                <img src="./assets/background-images/simon-picture-transparent-min.png" alt="picture of the ceo of the company">
+            </div>
+        </div>
+    </div>
+
+    <div class="services widerpadding" id="scroll-services">
+        <h2 class="h2-headline">Ich erzähl dir, was<br><span>ich so alles kann!</span></h2>
+        <p>Um besser verstehen zu können, was dir meine Kenntnisse und Fähigkeiten bringen, zähle ich sie dir auf und erkläre dir alles sorgfältig!</p>
+        <div class="parent skill-palette">
+            <div class="child skill">
+                <img src="./assets/icons/icon-mental-min.png" alt="icon of brain with synapses">
+                <h4>Neuromentaltraining</h4>
+                <div class="underline"></div>
+            </div>
+            <div class="child skill">
+                <img src="./assets/icons/icon-trance-min.png" alt="icon of an eye in trance">
+                <h4>Trancearbeit</h4>
+                <div class="underline inactive"></div>
+            </div>
+            <div class="child skill">
+                <img src="./assets/icons/icon-rueckkehr-min.png" alt="icon of a clock running backwards">
+                <h4>Rückführung</h4>
+                <div class="underline inactive"></div>
+            </div>
+            <div class="child skill">
+                <img src="./assets/icons/icon-energetik-min.png" alt="icon of a leave">
+                <h4>Humanenergetik</h4>
+                <div class="underline inactive"></div>
+            </div>
+        </div>
+        <div class="parent version-2-1 skill-info">
+            <div class="child skill-title">
+                <h2 class="h2-headline">Das ist<br><span id="current-service">Neuromentaltraining</span></h2>
+            </div>
+            <div class="child skill-description">
+                skill description
+            </div>
+        </div>
+    </div>
+
+    <div class="parent version-2-2 contact widerpadding"  id="scroll-contact">
+        <div class="child form">
+            <h2>Mach dir einen <span>Termin</span></h2>
+            <form class="contact-form">
+                <input type="text" id="name" name="name" placeholder="Vor- und Nachname" required>
+                <input type="email" id="email" name="email" placeholder="E-Mail Adresse" required>
+                <textarea id="message" name="message" rows="4" placeholder="Deine persönliche Nachricht" required></textarea>
+        
+                <button type="submit" class="submit-button">Lass uns starten!</button>
+            </form>
+        </div>
+        <div class="child map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d861.7689963552193!2d14.003343966962557!3d48.16119736181713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773f2e9a03d0643%3A0xb5bab2ee92268dc!2sHanriederstra%C3%9Fe%208%2C%204600%20Wels!5e0!3m2!1sde!2sat!4v1730144233406!5m2!1sde!2sat" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <div class="footer parent version-3">
+        <div class="child">
+            <img src="./assets/logos/brain-logo-white.png" alt="image of the logo of a brain with plants in white">
+        </div>
+        <div class="child footer-text">
+            <p>
+                © 2024 Mental Training Enzendorfer 
+            </p>
+            <p>
+                <a href="tel:+436604977270"><img src="./assets/icons/icon-phone.png" alt="phone icon"> +43 660 4977270</a>
+            </p>
+            <p>
+                <a href="mailto:enzendorfer-mentaltraining@gmail.com"><img src="./assets/icons/icon-mail.png" alt="mail icon"> enzendorfer-mentaltraining@gmail.com</a>
+            </p>
+            <p>
+                <a href="datenschutz.html">Datenschutz</a> | <a href="impressum.html">Impressum</a>
+            </p>
+        </div>
+        <div class="child socials parent version-3">
+            <a href="#"><img src="./assets/icons/icon-facebook.png" alt="facebook icon in white"></a>
+            <a href="#"><img src="./assets/icons/icon-instagram.png" alt="instagram icon in white"></a>
+        </div>
+    </div>
+
+    <div class="back-to-top">
+        <div class="arrow">
+            <div class="arrow-part"></div>
+            <div class="arrow-part"></div>
+            <div class="arrow-part"></div>
+        </div>
+        <span>Up</span>
+    </div>
+
+    <script src="./scripts/benefit-animation.js"></script>
+    <script src="./scripts/skill-animation.js"></script>
+    <script src="./scripts/night-switch-selector.js"></script>
+    <script src="./scripts/back-to-top.js"></script>
+</body>
+</html>
