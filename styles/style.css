@@ -445,6 +445,7 @@ body.dark-mode .main-image .switch-container .switch-label {
     margin-top: 2em;
     flex: unset;
     justify-content: space-evenly;
+    gap: clamp(.25em, 4dvw, 5em);
 }
 
 .footer .child{
@@ -582,6 +583,10 @@ body.dark-mode .footer a{
     .contact .form{
         text-align: left;
         max-width: 525px;
+    }
+
+    .footer{
+        gap: clamp(1em, 12.5dvw, 5em);
     }
 
     .footer .socials{
