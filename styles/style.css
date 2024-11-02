@@ -1011,15 +1011,13 @@ body.dark-mode .footer a{
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: clamp(45px, 12.5dvw, 65px);
+    height: clamp(45px, 12.5dvw, 65px);
     border: 1px solid var(--light-green);
     border-radius: 50%;
     background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    text-align: center;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
@@ -1034,14 +1032,14 @@ body.dark-mode .footer a{
 
 .back-to-top .arrow {
     position: relative;
-    width: 18px;
-    height: 18px;
-    margin-bottom: 2px;
+    width: 45%;
+    height: 45%;
+    margin: 14% auto 2px auto;
 }
 
 .back-to-top .arrow-part {
     position: absolute;
-    width: 10px;
+    width: 55%;
     height: 1px;
     border-radius: 1em;
     background-color: var(--light-green);
@@ -1051,8 +1049,8 @@ body.dark-mode .footer a{
 .back-to-top .arrow-part:nth-child(1) {
     top: 50%;
     left: 50%;
-    width: 6px;
-    transform: translate(-34%, -100%) rotate(45deg);
+    width: 35%;
+    transform: translate(-32%, -200%) rotate(45deg);
     transform-origin: right center;
 }
 
@@ -1063,10 +1061,10 @@ body.dark-mode .footer a{
 }
 
 .back-to-top .arrow-part:nth-child(3) {
-    width: 6px;
+    width: 35%;
     top: 50%;
     left: 50%;
-    transform: translate(-66%, -100%) rotate(-45deg);
+    transform: translate(-68%, -200%) rotate(-45deg);
     transform-origin: left center;
 }
 
@@ -1074,6 +1072,9 @@ body.dark-mode .footer a{
     font-size: 0.75rem;
     color: var(--light-green);
     transition: color 0.3s ease;
+    display: block;
+    margin: -8% auto 0 auto;
+    
 }
 
 /* Dark mode support */
