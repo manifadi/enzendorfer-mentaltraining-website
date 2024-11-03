@@ -1,9 +1,11 @@
 let benefits = [
-    "Durch gezielte Techniken im Neuromental-Coaching lernst du, negative Denkmuster zu erkennen.",
-    "Ein gestärktes Mindset führt zu mehr Selbstvertrauen und innerer Stabilität.",
-    "Du wirst in der Lage sein, dich emotional von negativen Ereignissen schneller zu erholen.",
-    "Mit der Zeit baust du mehr Resilienz auf, die dir hilft, in schwierigen Zeiten stark zu bleiben.", 
-    "Die positiven Gedanken führen zu einem besseren Wohlbefinden und mehr Lebensqualität."
+    "Entfalte dein volles Potenzial und entwickle ein positives, starkes Mindset.",
+    "Stärke deine mentale Widerstandskraft und gewinne mehr Selbstbewusstsein.",
+    "Löse emotionale Blockaden und reduziere nachhaltig deinen Stress.",
+    "Erhalte Klarheit über deine Ziele und entdecke neue Perspektiven für ein erfülltes Leben.", 
+    "Verbessere deine Lebensqualität und erreiche deine persönlichen Ziele effektiver.",
+    "Verstehe die Ursachen vergangener Erlebnisse und fördere deine emotionale Heilung.",
+    "Fördere Disziplin und innere Stärke durch eine Kombination aus mentaler und körperlicher Fitness."
 ];
 
 let currentIndex = 0;
@@ -67,12 +69,24 @@ function startAutoTransition() {
     }, 7000);
 }
 
+function createDots() {
+    const dotsContainer = document.querySelector('.benefits-dots');
+    dotsContainer.innerHTML = ''; // Clear existing dots
+    
+    benefits.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.className = `dot${index === 0 ? ' active' : ''}`;
+        dot.onclick = () => animateBenefit(index);
+        dotsContainer.appendChild(dot);
+    });
+}
+
 function initializeBenefits() {
     const benefitText = document.getElementById('benefit-text');
     benefitText.textContent = benefits[0];
     
-    // Set first dot as active
-    document.querySelector('.dot').classList.add('active');
+    // Create dots dynamically instead of using static HTML
+    createDots();
     
     // Initialize indexes
     previousIndex = 0;
