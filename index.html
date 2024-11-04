@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="parent version-3 menu-bar">
+    <div class="parent version-3 menu-bar animate-on-load">
         <div class="child"><img src="./assets/logos/enzendorfer-logo@png.png" id="logo-image" alt="enzendorfer-logo" class="clickable"></div>
         <div class="child">
             <ul class="menu">
@@ -60,8 +60,10 @@
         </div>
         <!-- Version 3: Drei Elemente, gleiche Breite -->
         <div class="parent version-3 headlines">
-            <div class="child title"><h2>Entdecke dein richtiges<br><span>Selbst!</span></h2></div>
-            <div class="child">
+            <div class="child title animate-on-load delay-1">
+                <h2>Entdecke dein richtiges<br><span>Selbst!</span></h2>
+            </div>
+            <div class="child animate-on-load delay-2">
                 <div class="scroll-arrow clickable">
                     <a href="#scroll-aboutme">
                         <div class="arrow-part"></div>
@@ -69,7 +71,7 @@
                     </a>
                 </div>
             </div>
-            <div class="child benefits">
+            <div class="child benefits animate-on-load delay-3">
                 <h4>BENEFITS</h4>
                 <div class="benefits-content">
                     <p id="benefit-text"></p>
@@ -84,7 +86,7 @@
 
     <div class="aboutme widerpadding" id="scroll-aboutme">
         <div class="parent version-2-2">
-            <div class="child">
+            <div class="child scroll-animate">
                 <h2 class="h2-headline">Damit du weißt, mit wem<br><span>Du's zu tun hast</span></h2>
                 <div class="parent version-2-1 aboutme-text">
                     <div class="child"></div>
@@ -97,7 +99,7 @@
                     Mein Name ist Simon Enzendorfer, und als Neuro Mental Trainer liegt es mir am Herzen, Menschen dabei zu begleiten, ihr volles Potenzial zu entfalten und ein starkes, positives Mindset zu entwickeln. Durch meine fundierten Ausbildungen im Bereich des Neuro Mental Trainings, in Trancearbeit und Hypnose sowie als Rückführungsleiter bringe ich ein breites Spektrum an effektiven Methoden mit, um individuelle Entwicklungsprozesse bestmöglich zu fördern. In meiner Freizeit trainiere ich Kickboxen und arbeite als Jugendtrainer in diesem Bereich. Sport ist für mich eine Quelle der mentalen Stärke und Disziplin, die sich auch in meiner Arbeit widerspiegelt. Mit diesem ganzheitlichen Ansatz unterstütze ich Sie dabei, Selbstbewusstsein, innere Stärke und eine positive Lebenseinstellung zu entwickeln – für ein erfüllteres Leben in allen Bereichen.    
                 </p>
             </div>
-            <div class="child desktop-picture">
+            <div class="child desktop-picture scroll-animate">
                 <img src="./assets/background-images/simon-picture-transparent-min.png" alt="picture of the ceo of the company">
             </div>
         </div>
@@ -107,22 +109,22 @@
         <h2 class="h2-headline">Ich erzähl dir, was<br><span>ich so alles kann!</span></h2>
         <p>Um besser verstehen zu können, was dir meine Kenntnisse und Fähigkeiten bringen, zähle ich sie dir auf und erkläre dir alles sorgfältig!</p>
         <div class="parent skill-palette">
-            <div class="child skill">
+            <div class="child skill scroll-animate">
                 <img src="./assets/icons/icon-mental-min.png" alt="icon of brain with synapses">
                 <h4>Neuromentaltraining</h4>
                 <div class="underline"></div>
             </div>
-            <div class="child skill">
+            <div class="child skill scroll-animate">
                 <img src="./assets/icons/icon-trance-min.png" alt="icon of an eye in trance">
                 <h4>Trancearbeit</h4>
                 <div class="underline inactive"></div>
             </div>
-            <div class="child skill">
+            <div class="child skill scroll-animate">
                 <img src="./assets/icons/icon-rueckkehr-min.png" alt="icon of a clock running backwards">
                 <h4>Rückführung</h4>
                 <div class="underline inactive"></div>
             </div>
-            <div class="child skill">
+            <div class="child skill scroll-animate">
                 <img src="./assets/icons/icon-energetik-min.png" alt="icon of a leave">
                 <h4>Humanenergetik</h4>
                 <div class="underline inactive"></div>
@@ -191,5 +193,7 @@
     <script src="./scripts/skill-animation.js"></script>
     <script src="./scripts/night-switch-selector.js"></script>
     <script src="./scripts/back-to-top.js"></script>
+    <script src="./scripts/intro-animation.js"></script>
+    <script src="./scripts/scroll-animations.js"></script>
 </body>
 </html>
