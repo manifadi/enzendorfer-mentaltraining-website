@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Intersection Observer for scroll animations
     const observerOptions = {
         root: null,
-        // Start animation when element is 30vh into the viewport
         rootMargin: '-30% 0px 0px 0px',
         threshold: 0.1
     };
@@ -30,9 +29,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 skills.forEach((skill, index) => {
                     setTimeout(() => {
                         skill.classList.add('visible');
-                    }, index * 200); // 200ms delay between each skill
+                    }, index * 200);
                 });
                 skillsObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Price cards animation
+    const priceObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const cards = entry.target.querySelectorAll('.price-card.scroll-animate');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 200);
+                });
+                priceObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -40,7 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start observing sections
     const aboutSection = document.querySelector('.aboutme');
     const servicesSection = document.querySelector('.services');
+    const pricesSection = document.querySelector('.prices');
 
     if (aboutSection) aboutObserver.observe(aboutSection);
     if (servicesSection) skillsObserver.observe(servicesSection);
+    if (pricesSection) priceObserver.observe(pricesSection);
 });
