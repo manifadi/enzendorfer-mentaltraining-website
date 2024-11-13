@@ -68,32 +68,7 @@
 .arrow-left {
     position: relative;
     display: inline-block;
-    width: 1em;
-    height: 1em;
-    margin-right: 0.5em;
-}
-
-.arrow-left::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 0.75em;
-    height: 0.15em;
-    background-color: currentColor;
-    transform: translateY(-50%);
-}
-
-.arrow-left::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 0.5em;
-    height: 0.5em;
-    border-left: 0.15em solid currentColor;
-    border-bottom: 0.15em solid currentColor;
-    transform: translateY(-50%) rotate(45deg);
+    margin-right: 0.8em;
 }
 
 /* Dark mode support */
