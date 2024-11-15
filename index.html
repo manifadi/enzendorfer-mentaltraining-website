@@ -184,11 +184,114 @@
                 </div>
             </div>
         </section>
+
+        <section class="prices widerpadding" id="scroll-prices" aria-label="Preisliste">
+            <h2 class="h2-headline">Eine Investition in<br><span>dein Wachstum</span></h2>
+            <p>Wähle das passende Paket für deine persönliche Entwicklung</p>
+            
+            <div class="price-cards-container">
+                <button class="nav-button prev" aria-label="Previous cards">
+                    <div class="arrow-left"></div>
+                </button>
+                
+                <div class="price-cards-wrapper">
+                    <div class="price-cards">
+                        
+                        <!-- Price Card Template -->
+                        <div class="price-card scroll-animate">
+                            <div class="card-header">
+                                <h3>Kennenlerngespräch</h3>
+                                <p class="price">€80<span>/Session</span></p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>60 Minuten Kennenlernen</li>
+                                    <li>Themenfindung und Tests</li>
+                                    <li>pro angefangener 1/4 Stunde +20€</li>
+                                </ul>
+                            </div>
+                            <a href="#scroll-contact" class="price-cta">Anfragen</a>
+                        </div>
+    
+                        <!-- Premium Card (Featured) -->
+                        <div class="price-card featured scroll-animate">
+                            <div class="featured-badge">Beliebt</div>
+                            <div class="card-header">
+                                <h3>5er Block: Neuromentaltraining</h3>
+                                <p class="price">€450<span>/Block</span></p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>5 Neuromentaltraining Sessions</li>
+                                    <li>Zuerst Kennenlerngespräch</li>
+                                    <li>Aufgaben und Übungen für Zuhause</li>
+                                </ul>
+                            </div>
+                            <a href="#scroll-contact" class="price-cta">Anfragen</a>
+                        </div>
+                        
+                        <div class="price-card scroll-animate">
+                            <div class="card-header">
+                                <h3>Trancearbeit</h3>
+                                <p class="price">€80<span>/Session</span></p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>60 Minuten Einzelcoaching</li>
+                                    <li>Zuerst Kennenlerngespräch</li>
+                                    <li>pro angefangener 1/4 Stunde +20€</li>
+                                </ul>
+                            </div>
+                            <a href="#scroll-contact" class="price-cta">Anfragen</a>
+                        </div>
+    
+                        <!-- Professional Card -->
+                        <div class="price-card scroll-animate">
+                            <div class="card-header">
+                                <h3>Rückführung</h3>
+                                <p class="price">€100<span>/Stunde</span></p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>60-120 Minuten Rückführung</li>
+                                    <li>Zuerst Kennenlerngespräch</li>
+                                    <li>pro angefangener 1/4 Stunde +20€</li>
+                                </ul>
+                            </div>
+                            <a href="#scroll-contact" class="price-cta">Anfragen</a>
+                        </div>
+    
+                        <div class="price-card scroll-animate">
+                            <div class="card-header">
+                                <h3>Humanenergetik</h3>
+                                <p class="price">€80<span>/Session</span></p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>60 Minuten Humanenergetik</li>
+                                    <li>Zuerst Kennenlerngespräch</li>
+                                    <li>pro angefangener 1/4 Stunde +20€</li>
+                                </ul>
+                            </div>
+                            <a href="#scroll-contact" class="price-cta">Anfragen</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <button class="nav-button next" aria-label="Next cards">
+                    <div class="arrow-right"></div>
+                </button>
+            </div>
+            
+            <div class="price-cards-pagination">
+                <!-- Dots will be added dynamically -->
+            </div>
+        </section>
         
         <section class="contact widerpadding" id="scroll-contact" aria-label="Kontakt">
             <div class="child form">
                 <h2>Mach dir einen <span>Termin</span></h2>
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form">
                     <input type="text" id="name" name="name" placeholder="Vor- und Nachname" required>
                     <input type="email" id="email" name="email" placeholder="E-Mail Adresse" required>
                     <textarea id="message" name="message" rows="4" placeholder="Deine persönliche Nachricht" required></textarea>
@@ -206,108 +309,6 @@
             </div>
         </section>
     </main>
-
-    <section class="prices widerpadding" id="scroll-prices" aria-label="Preisliste">
-        <h2 class="h2-headline">Eine Investition in<br><span>dein Wachstum</span></h2>
-        <p>Wähle das passende Paket für deine persönliche Entwicklung</p>
-        
-        <div class="price-cards-container">
-            <button class="nav-button prev" aria-label="Previous cards">
-                <div class="arrow-left"></div>
-            </button>
-            
-            <div class="price-cards-wrapper">
-                <div class="price-cards">
-                    <!-- Price Card Template -->
-                    <div class="price-card scroll-animate">
-                        <div class="card-header">
-                            <h3>Trancearbeit</h3>
-                            <p class="price">€80<span>/Session</span></p>
-                        </div>
-                        <div class="card-content">
-                            <ul>
-                                <li>60 Minuten Einzelcoaching</li>
-                                <li>Zuerst Kennenlerngespräch</li>
-                                <li>pro angefangener 1/4 Stunde +20€</li>
-                            </ul>
-                        </div>
-                        <a href="#scroll-contact" class="price-cta">Anfragen</a>
-                    </div>
-
-                    <!-- Premium Card (Featured) -->
-                    <div class="price-card featured scroll-animate">
-                        <div class="featured-badge">Beliebt</div>
-                        <div class="card-header">
-                            <h3>5er Block: Neuromentaltraining</h3>
-                            <p class="price">€450<span>/Block</span></p>
-                        </div>
-                        <div class="card-content">
-                            <ul>
-                                <li>5 Neuromentaltraining Sessions</li>
-                                <li>Zuerst Kennenlerngespräch</li>
-                                <li>Aufgaben und Übungen für Zuhause</li>
-                            </ul>
-                        </div>
-                        <a href="#scroll-contact" class="price-cta">Anfragen</a>
-                    </div>
-
-                    <!-- Professional Card -->
-                    <div class="price-card scroll-animate">
-                        <div class="card-header">
-                            <h3>Rückführung</h3>
-                            <p class="price">€100<span>/Stunde</span></p>
-                        </div>
-                        <div class="card-content">
-                            <ul>
-                                <li>60-120 Minuten Rückführung</li>
-                                <li>Zuerst Kennenlerngespräch</li>
-                                <li>pro angefangener 1/4 Stunde +20€</li>
-                            </ul>
-                        </div>
-                        <a href="#scroll-contact" class="price-cta">Anfragen</a>
-                    </div>
-
-                    <div class="price-card scroll-animate">
-                        <div class="card-header">
-                            <h3>Humanenergetik</h3>
-                            <p class="price">€80<span>/Session</span></p>
-                        </div>
-                        <div class="card-content">
-                            <ul>
-                                <li>60 Minuten Humanenergetik</li>
-                                <li>Zuerst Kennenlerngespräch</li>
-                                <li>pro angefangener 1/4 Stunde +20€</li>
-                            </ul>
-                        </div>
-                        <a href="#scroll-contact" class="price-cta">Anfragen</a>
-                    </div>
-
-                    <div class="price-card scroll-animate">
-                        <div class="card-header">
-                            <h3>Kennenlerngespräch</h3>
-                            <p class="price">€80<span>/Session</span></p>
-                        </div>
-                        <div class="card-content">
-                            <ul>
-                                <li>60 Minuten Kennenlernen</li>
-                                <li>Themenfindung und Tests</li>
-                                <li>pro angefangener 1/4 Stunde +20€</li>
-                            </ul>
-                        </div>
-                        <a href="#scroll-contact" class="price-cta">Anfragen</a>
-                    </div>
-                </div>
-            </div>
-
-            <button class="nav-button next" aria-label="Next cards">
-                <div class="arrow-right"></div>
-            </button>
-        </div>
-        
-        <div class="price-cards-pagination">
-            <!-- Dots will be added dynamically -->
-        </div>
-    </section>
 
     <footer class="footer parent version-3">
         <div class="child">
@@ -349,5 +350,6 @@
     <script src="./scripts/intro-animation.js"></script>
     <script src="./scripts/scroll-animations.js"></script>
     <script src="./scripts/price-cards.js"></script>
+    <script src="./scripts/contact-form.js"></script>
 </body>
 </html>
