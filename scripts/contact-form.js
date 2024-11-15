@@ -1,35 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
         const formData = new FormData(form);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            message: formData.get('message')
-        };
-
-        // Send the data to the server
-        fetch('/send-email', {
+        
+        fetch(form.action, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
+            body: formData
         })
-        .then(response => {
-            if (response.ok) {
-                alert('Your message has been sent successfully!');
-                form.reset(); // Reset the form
-            } else {
-                alert('There was an error sending your message. Please try again.');
+        .then(response => response.text())
+        .then(result => {
+            alert(result);
+            if (result.includes("Vielen Dank!")) {
+                form.reset();
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('There was an error sending your message. Please try again.');
+            alert('Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.');
         });
     });
 });
