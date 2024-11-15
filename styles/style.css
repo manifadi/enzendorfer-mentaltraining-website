@@ -1217,6 +1217,7 @@ body.dark-mode .back-to-top {
     flex: 0 0 auto;
     opacity: 0.7;
     transform: scale(0.9);
+    word-break: break-all;
 }
 
 .price-card:hover {
