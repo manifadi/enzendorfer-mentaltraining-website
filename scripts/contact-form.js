@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const formData = new FormData(form);
         
-        fetch(form.action, {
+        fetch('send_email.php', {
             method: 'POST',
             body: formData
         })
@@ -18,9 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(result => {
             alert(result);
-            if (result.includes("Vielen Dank!")) {
-                form.reset();
-            }
+            form.reset();
         })
         .catch(error => {
             console.error('Error:', error);
