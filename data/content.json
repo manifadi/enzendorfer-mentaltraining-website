@@ -1,0 +1,263 @@
+[
+    {
+        "id": "header_config",
+        "type": "config",
+        "visible": true,
+        "name": "Header & Navigation",
+        "data": {
+            "logo_dark": "assets\/logos\/enzendorfer-logo.png",
+            "logo_light": "assets\/logos\/enzendorfer-logo-white.png",
+            "nav_links": [
+                {
+                    "text": "Über mich",
+                    "target": "#about"
+                },
+                {
+                    "text": "Dienstleistungen",
+                    "target": "#services"
+                },
+                {
+                    "text": "Kontakt",
+                    "target": "#contact"
+                },
+                {
+                    "text": "Preisliste",
+                    "target": "#pricing"
+                },
+                {
+                    "text": "Testimonials",
+                    "target": "#testimonials"
+                }
+            ]
+        }
+    },
+    {
+        "id": "hero_section",
+        "type": "hero",
+        "visible": true,
+        "name": "Hero Section",
+        "data": {
+            "background_image": "assets\/background-images\/Person auf Grasfeld Kopie.jpg",
+            "headline": "ENTDECKE DEIN WAHRES SELBST!",
+            "subheadline": "Verstehe die Ursachen vergangener Erlebnisse und fördere deine emotionale Heilung.",
+            "benefits": {
+                "0": {
+                    "title": "BENEFITS",
+                    "text": "Stärke dein Selbstbewusstsein"
+                },
+                "1": {
+                    "title": "BENEFITS",
+                    "text": "Löse alte Blockaden"
+                },
+                "2": {
+                    "title": "BENEFITS",
+                    "text": "Finde innere Ruhe"
+                },
+                "3": {
+                    "title": "BENEFITS",
+                    "text": "Steigere deine Resilienz"
+                },
+                "4": {
+                    "title": "BENEFITS",
+                    "text": "Erreiche deine Ziele"
+                },
+                "5": {
+                    "title": "BENEFITS",
+                    "text": "Verbessere deine Beziehungen"
+                },
+                "6": {
+                    "title": "BENEFITS",
+                    "text": "Lebe im Hier und Jetzt"
+                },
+                "1766588124467": {
+                    "title": "Stärke",
+                    "text": "Hier entdeckst du eine eigene Stärke!"
+                }
+            }
+        }
+    },
+    {
+        "id": "about_section",
+        "type": "about",
+        "visible": true,
+        "name": "Über mich",
+        "data": {
+            "headline": "Der Begleiter für",
+            "highlight_headline": "dein Wachstum",
+            "text": "Mein Name ist Simon Enzendorfer, und als Neuromentaltrainer liegt es mir am Herzen, Menschen dabei zu begleiten, ihr volles Potenzial zu entfalten und ein starkes, positives Mindset aufzubauen. Durch meine Ausbildungen im Bereich des Neuromentaltrainings, Trancearbeit und Hypnose sowie als Rückführungsleiter biete ich vielfältige Methoden zur individuellen Weiterentwicklung.",
+            "image": "assets\/background-images\/simon-picture-transparent-min.png"
+        }
+    },
+    {
+        "id": "services_section",
+        "type": "services",
+        "visible": true,
+        "name": "Dienstleistungen",
+        "data": {
+            "headline": "Ansätze für",
+            "highlight_headline": "deinen Fortschritt",
+            "intro_text": "Um besser verstehen zu können, was dir meine Kenntnisse und Fähigkeiten bringen, zähle ich sie dir auf und erkläre dir alles sorgfältig!",
+            "services": {
+                "0": {
+                    "title": "Neuromentaltraining",
+                    "description": "Neuromentaltraining ist eine innovative Methode, die darauf abzielt, das geistige Potenzial zu aktivieren und nachhaltig zu stärken.",
+                    "details": [
+                        "Gehirngerechtes Lernen",
+                        "Mentale Stärke aufbauen",
+                        "Fokus und Konzentration steigern"
+                    ]
+                },
+                "1": {
+                    "title": "Trancearbeit",
+                    "description": "Durch gezielte Trancearbeit erreichen wir tiefere Bewusstseinsebenen, um dort Veränderungen anzustoßen.",
+                    "details": [
+                        "Tiefe Entspannung",
+                        "Unterbewusstsein aktivieren",
+                        "Blockaden lösen"
+                    ]
+                },
+                "2": {
+                    "title": "Rückführung",
+                    "description": "Rückführungen können helfen, Ursachen in der Vergangenheit zu finden und aufzulösen.",
+                    "details": [
+                        "Ursachenforschung",
+                        "Aufarbeitung",
+                        "Innerer Frieden"
+                    ]
+                },
+                "1766534765499": {
+                    "title": "Humanenergetik",
+                    "description": "Die Humanenergetik zielt darauf ab, die Lebensenergie in harmonischen Fluss zu bringen und innere Blockaden sanft aufzulösen.",
+                    "details": [
+                        "Chakren Ausgleich",
+                        "Gleichgewicht von Körper und Geist",
+                        "Selbstheilungskräfte"
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "id": "pricing_section",
+        "type": "pricing",
+        "visible": true,
+        "name": "Preisliste",
+        "data": {
+            "headline": "Eine Investition in",
+            "highlight_headline": "dein Wachstum",
+            "intro_text": "Wähle das passende Paket für deine persönliche Entwicklung",
+            "cards": [
+                {
+                    "title": "Kennenlerngespräch",
+                    "price": "€60",
+                    "price_suffix": "",
+                    "button_text": "Anfragen",
+                    "features": [
+                        "60 Minuten Kennenlernen",
+                        "Individuelle Zielanalyse",
+                        "Ziele und Erwartungen",
+                        "Transparente Vorgehensweise"
+                    ]
+                },
+                {
+                    "is_popular": "1",
+                    "title": "5er Block: Neuromentaltraining",
+                    "price": "€450",
+                    "price_suffix": "\/Block",
+                    "button_text": "Anfragen",
+                    "features": [
+                        "5 Neuromentaltraining Sessions",
+                        "Zuerst Kennenlerngespräch",
+                        "Aufgaben und Übungen für Zuhause",
+                        "Ratenzahlung möglich"
+                    ]
+                },
+                {
+                    "title": "Trancearbeit",
+                    "price": "€80",
+                    "price_suffix": "\/Session",
+                    "button_text": "Anfragen",
+                    "features": [
+                        "60 Minuten Einzeltraining",
+                        "Zuerst Kennenlerngespräch",
+                        "pro angefangener 1\/4 Stunde +20€"
+                    ]
+                },
+                {
+                    "title": "10er Block: Intensiv",
+                    "price": "€850",
+                    "price_suffix": "\/Block",
+                    "button_text": "Anfragen",
+                    "features": [
+                        "10 Sessions",
+                        "Intensive Betreuung",
+                        "WhatsApp Support",
+                        "Individueller Plan"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "id": "testimonials_section",
+        "type": "testimonials",
+        "visible": true,
+        "name": "Das sagen meine Kunden",
+        "data": {
+            "headline": "Das sagen",
+            "highlight_headline": "meine Kunden",
+            "items": {
+                "0": {
+                    "name": "Maria M.",
+                    "text": "Das Training hat mein Leben verändert. Ich fühle mich viel ausgeglichener."
+                },
+                "1": {
+                    "name": "Thomas K.",
+                    "text": "Simon ist ein großartiger Trainer. Die Hypnose war eine tolle Erfahrung."
+                },
+                "2": {
+                    "name": "Sarah L.",
+                    "text": "Ich konnte meine Prüfungsangst endlich überwinden. Danke!"
+                },
+                "1766579350530": {
+                    "name": "Manuel F.",
+                    "text": "Eine unglaubliche Erfahrung, hätte nicht gedacht, dass es so viel Auswirkung auf mich hätte, wie es letzen Endes getan hat!"
+                }
+            }
+        }
+    },
+    {
+        "id": "contact_section",
+        "type": "contact",
+        "visible": true,
+        "name": "Kontakt Section",
+        "data": {
+            "headline": "Mach dir einen",
+            "highlight_headline": "Termin",
+            "form_headline": "Kontaktformular",
+            "button_text": "LASS UNS STARTEN!",
+            "checkbox_text": "Ich stimme zu, dass meine Daten gemäß der Datenschutzerklärung verarbeitet werden."
+        }
+    },
+    {
+        "id": "footer_config",
+        "type": "footer",
+        "visible": true,
+        "name": "Footer",
+        "data": {
+            "contact_phone": "+43 670 3590371",
+            "contact_email": "nmt.enzendorfer@gmail.com",
+            "copyright_text": "© 2024 Mental Training Enzendorfer",
+            "social_links": [
+                {
+                    "platform": "facebook",
+                    "url": "#"
+                },
+                {
+                    "platform": "instagram",
+                    "url": "#"
+                }
+            ]
+        }
+    }
+]
