@@ -116,7 +116,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- MAIN EDITOR AREA -->
     <main class="cms-main">
         <?php if ($message): ?>
-            <div class="alert <?= strpos($message, 'Fehler') !== false ? 'error' : 'success' ?>"><?= $message ?></div>
+            <?php
+            $isError = strpos($message, 'Fehler') !== false;
+            $emoji = $isError ? '⚠️' : '🎉';
+            ?>
+            <div class="cms-toast <?= $isError ? 'error' : 'success' ?>">
+                <div style="display:flex; gap:15px; align-items:center;">
+                    <span class="toast-emoji"><?= $emoji ?></span>
+                    <span><?= $message ?></span>
+                </div>
+                <button type="button" class="toast-close"
+                    onclick="this.closest('.cms-toast').style.display='none'">✕</button>
+            </div>
         <?php endif; ?>
 
         <div class="editor-toolbar">

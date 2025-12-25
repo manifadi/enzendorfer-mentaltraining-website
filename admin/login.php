@@ -5,8 +5,8 @@ session_start();
 // In a real app, use a secure hash and maybe a config file
 // For this MVP/File-based CMS, we hardcode a default login.
 // User: admin, Pass: admin123
-$valid_user = 'admin';
-$valid_pass_hash = password_hash('admin123', PASSWORD_DEFAULT);
+$valid_user = 'nmt-admin';
+$valid_pass_hash = password_hash('Neurosenz69!', PASSWORD_DEFAULT);
 
 $error = '';
 

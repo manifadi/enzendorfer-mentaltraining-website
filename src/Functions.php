@@ -299,8 +299,9 @@ function renderContact($section)
                 <div class="map-col reveal delay-300">
                     <!-- Static map placeholder image or iframe -->
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.7667823528654!2d14.2885!3d48.2495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDE0JzU4LjIiTiAxNMKwMTcnMTguNiJF!5e0!3m2!1sde!2sat!4v1634567890123!5m2!1sde!2sat"
-                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1330.6297601141046!2d14.099783482146565!3d48.163079297603204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773ecd70ce40bff%3A0xe59b13b9e38d3871!2sBiergasse%2011%2C%204616%20Bergern!5e0!3m2!1sde!2sat!4v1766661557201!5m2!1sde!2sat"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
     </section>

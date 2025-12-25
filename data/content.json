@@ -236,7 +236,8 @@
             "highlight_headline": "Termin",
             "form_headline": "Kontaktformular",
             "button_text": "LASS UNS STARTEN!",
-            "checkbox_text": "Ich stimme zu, dass meine Daten gemäß der Datenschutzerklärung verarbeitet werden."
+            "checkbox_text": "Ich stimme zu, dass meine Daten gemäß der Datenschutzerklärung verarbeitet werden.",
+            "maps_link": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d1330.6297601141046!2d14.099783482146565!3d48.163079297603204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773ecd70ce40bff%3A0xe59b13b9e38d3871!2sBiergasse%2011%2C%204616%20Bergern!5e0!3m2!1sde!2sat!4v1766661557201!5m2!1sde!2sat\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>"
         }
     },
     {
