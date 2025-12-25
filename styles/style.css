@@ -1182,10 +1182,10 @@ body.dark-mode .toggle-text {
         /* Darker background for dark mode */
         --text-dark: #f0f0f0;
         /* Lighter text for dark mode */
-        --primary-green: #66bb6a;
+        --primary-green: #5b9b74;
         /* Keep primary green */
-        --secondary-green: #4caf50;
-        /* Keep secondary green */
+        --secondary-green: #cce0d4;
+        /* Keep secondary green LIGHT for contrast */
         --text-light: #cccccc;
         /* Slightly darker light text */
         --border-color: #333333;
@@ -1235,8 +1235,8 @@ body.dark-mode .toggle-text {
     /* Specific service box text color overrides for dark mode */
     body.dark-mode .service-item-v2 h3,
     body.dark-mode .service-item-v2 p {
-        color: var(--text-dark);
-        /* Ensure text is light in dark mode */
+        color: #333333;
+        /* Ensure text is BLACK in dark mode on light green bg */
     }
 
     /* 2. Hero: 70dvh Height & Positioning */
