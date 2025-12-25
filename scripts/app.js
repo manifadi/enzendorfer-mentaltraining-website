@@ -164,8 +164,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Scroll to Top ---
+    // --- Scroll to Top ---
     const scrollBtn = document.getElementById('scroll-to-top');
     if(scrollBtn) {
+        // Toggle visibility on scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+
+        // Scroll up on click
         scrollBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
