@@ -1117,48 +1117,92 @@ body.dark-mode .toggle-text {
 
     /* --- Mobile Fixes (User Request) --- */
 
-    /* 1. Header: Hide "Day Mode" Text */
+    /* 0. Global Overflow Prevention (Mobile Only Scope) */
+    html,
+    body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+
+    /* 1. Header: Hide "Day Mode" Text & Adjust Toggle Width */
     .toggle-text {
         display: none;
     }
 
-    /* 2. Hero: Reduce Height */
+    .theme-toggle {
+        width: 60px;
+        /* Reduced width */
+    }
+
+    .toggle-track {
+        width: 60px;
+        /* Match button width */
+    }
+
+    body.dark-mode .toggle-indicator {
+        left: calc(100% - 35px);
+        /* Keep existing logic, check if needs tweak for 60px width */
+    }
+
+    /* 2. Hero: 70dvh Height & Positioning */
     .hero-wrapper {
-        padding: 40px 10px 10px 10px;
-        /* Reduced top padding */
+        padding: 100px 10px 0 10px;
+        /* Top padding for header space */
     }
 
     .hero-section {
-        padding: 40px 0;
-        min-height: auto;
+        height: 70dvh;
+        /* Explicit viewport height */
+        min-height: unset;
+        padding: 20px;
+        align-items: center;
+        /* Center content vertically */
     }
 
     .hero-text h1 {
         font-size: 2rem;
-        /* Slightly smaller for mobile */
     }
 
-    /* 3. Services: Text Spacing & Image Ratio */
+    /* 3. Services: Fix Overflow & Text Spacing */
+    .services-section-v2,
+    .services-section {
+        margin: 40px 10px;
+        /* Reduced margins */
+        padding: 40px 15px;
+        width: auto;
+        /* Reset any fixed widths */
+    }
+
     .service-item-v2 {
-        padding: 0 15px;
-        /* Add breathing room for text */
+        padding: 20px 0;
+        width: 100%;
+        min-height: auto;
+        /* Remove huge height forcing */
+    }
+
+    /* Neutralize any grid layouts */
+    .services-layout-grid {
+        display: block;
+        /* Stack */
     }
 
     .visual-card-mobile-v2 {
+        display: block;
+        /* Ensure visible */
         width: 100%;
+        height: auto;
         aspect-ratio: 16 / 9;
-        /* Force 16:9 */
         background-size: cover;
         background-position: center;
         border-radius: 12px;
         margin-bottom: 20px;
+        margin-top: 10px;
     }
 
     /* 4. Contact: Map Width */
     .map-col iframe {
         width: 100% !important;
         height: 300px;
-        /* Adjust height for mobile */
     }
 
     /* 5. Footer: Layout & Icons */
