@@ -48,10 +48,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Mobile Menu ---
     const menuToggle = document.getElementById('mobile-menu-toggle');
     const nav = document.querySelector('.main-nav');
+    const navLinks = document.querySelectorAll('.main-nav a');
     
     if (menuToggle && nav) {
         menuToggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
+            const isActive = nav.classList.toggle('active');
+            
+            // Toggle Body Scroll
+            if (isActive) {
+                document.body.style.overflow = 'hidden';
+                menuToggle.textContent = '✕'; // Close Icon
+            } else {
+                document.body.style.overflow = '';
+                menuToggle.innerHTML = '&#9776;'; // Hamburger standard or '☰'
+            }
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                document.body.style.overflow = '';
+                menuToggle.innerHTML = '&#9776;';
+            });
         });
     }
 
