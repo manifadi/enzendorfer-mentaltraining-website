@@ -22,9 +22,30 @@ body.light-mode {
 body.dark-mode {
     --bg-body: var(--bg-dark);
     --text-body: var(--text-light);
-    --header-bg: #222;
+    --header-bg: #121212;
+    /* Darker header */
     --card-bg: #333;
     --text-dark: #f0f0f0;
+}
+
+/* Specific Dark Mode Overrides */
+body.dark-mode .services-section,
+body.dark-mode .services-section-v2 {
+    color: #333333;
+    /* Force black text on green background */
+}
+
+body.dark-mode .services-section h1,
+body.dark-mode .services-section h2,
+body.dark-mode .services-section h3,
+body.dark-mode .services-section-v2 h3 {
+    color: #333333;
+    /* Ensure HEADINGS are also black unless highlighted */
+}
+
+body.dark-mode .check-list-v2 li::before {
+    color: var(--primary-green);
+    /* Checkmarks stay green */
 }
 
 * {
@@ -624,6 +645,14 @@ body.dark-mode .toggle-text {
         display: none;
     }
 
+    .service-item-v2 h3 {
+        font-size: calc(34px + 5 * (100vw - 1600px) / 800);
+        ;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
     .mobile-visual-v2 {
         display: block;
     }
@@ -1144,6 +1173,72 @@ body.dark-mode .toggle-text {
         /* Keep existing logic, check if needs tweak for 60px width */
     }
 
+    /* Dark Mode Header Override (Mobile & Desktop Global is safe here as variable) */
+    /* Handled in :root/body.dark-mode variables, but ensuring specific override if needed */
+
+    /* Dark Mode Variables for Mobile */
+    body.dark-mode {
+        --bg-white: #1a1a1a;
+        /* Darker background for dark mode */
+        --text-dark: #f0f0f0;
+        /* Lighter text for dark mode */
+        --primary-green: #66bb6a;
+        /* Keep primary green */
+        --secondary-green: #4caf50;
+        /* Keep secondary green */
+        --text-light: #cccccc;
+        /* Slightly darker light text */
+        --border-color: #333333;
+        /* Darker border */
+        --box-shadow-light: rgba(0, 0, 0, 0.2);
+        /* Darker shadow */
+        --box-shadow-dark: rgba(0, 0, 0, 0.4);
+        /* Even darker shadow */
+        --bg-light-gray: #2c2c2c;
+        /* Darker light gray */
+        --bg-dark-gray: #121212;
+        /* Darker dark gray */
+        --bg-gradient-start: #1a1a1a;
+        /* Darker gradient start */
+        --bg-gradient-end: #0a0a0a;
+        /* Darker gradient end */
+        --card-bg: #222222;
+        /* Darker card background */
+        --card-border: #3a3a3a;
+        /* Darker card border */
+        --input-bg: #333333;
+        /* Darker input background */
+        --input-border: #555555;
+        /* Darker input border */
+        --placeholder-color: #999999;
+        /* Lighter placeholder */
+        --button-bg: var(--primary-green);
+        /* Keep button bg */
+        --button-text: #ffffff;
+        /* Keep button text */
+        --link-color: var(--primary-green);
+        /* Keep link color */
+        --link-hover-color: var(--secondary-green);
+        /* Keep link hover */
+        --icon-color: #f0f0f0;
+        /* Lighter icon color */
+        --footer-bg: #121212;
+        /* Darker footer background */
+        --footer-text: #cccccc;
+        /* Lighter footer text */
+        --footer-link: #f0f0f0;
+        /* Lighter footer link */
+        --footer-border: #333333;
+        /* Darker footer border */
+    }
+
+    /* Specific service box text color overrides for dark mode */
+    body.dark-mode .service-item-v2 h3,
+    body.dark-mode .service-item-v2 p {
+        color: var(--text-dark);
+        /* Ensure text is light in dark mode */
+    }
+
     /* 2. Hero: 70dvh Height & Positioning */
     .hero-wrapper {
         padding: 100px 10px 0 10px;
@@ -1235,7 +1330,7 @@ body.dark-mode .toggle-text {
 
     /* Ensure Social Icons are visible (invert if necessary or force style) */
     .light-mode .social-icon-img {
-        filter: brightness(0);
+        filter: brightness(1);
         /* Black icons on light footer?? Or White? */
         /* Check Footer BG. Footer is usually dark? */
     }
