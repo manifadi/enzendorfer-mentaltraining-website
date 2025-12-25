@@ -226,6 +226,26 @@ body.cms-layout {
     padding-bottom: 80px;
 }
 
+.visual-logos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.visual-logos-grid .logo-box {
+    display: flex;
+    width: 100%;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+}
+
+.visual-logos-grid .logo-box label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 /* Padding override for contact specific wrapper */
 .visual-preview-wrapper.contact-preview {
     padding: 60px;
@@ -718,11 +738,14 @@ body.cms-layout {
 }
 
 .quote-icon {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--primary-green);
-    margin-bottom: 20px;
-    display: block;
-    position: static;
+    opacity: 0.3;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: serif;
+    line-height: 1;
 }
 
 .quote-input {
@@ -733,10 +756,10 @@ body.cms-layout {
 }
 
 .author-input {
-    font-weight: 800;
+    font-weight: bold;
+    color: var(--primary-green);
     text-align: center;
     margin-top: 20px;
-    color: var(--text-dark);
 }
 
 /* CONTACT */

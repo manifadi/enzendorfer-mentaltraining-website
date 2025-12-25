@@ -55,10 +55,10 @@ function renderHero($section)
             <div class="hero-overlay"></div>
             <div class="container hero-content">
                 <div class="hero-text">
-                    <h1><?= $data['headline'] ?></h1>
+                    <h1 class="hero-animate-init"><?= $data['headline'] ?></h1>
                     <!-- <p class="subheadline"><?= $data['subheadline'] ?></p> -->
                 </div>
-                <div class="hero-benefits-swiper swiper">
+                <div class="hero-benefits-swiper swiper hero-animate-delay-1">
                     <div class="swiper-wrapper">
                         <?php foreach ($data['benefits'] as $benefit): ?>
                             <div class="swiper-slide">
@@ -89,13 +89,13 @@ function renderAbout($section)
     ?>
     <section class="about-section" id="about">
         <div class="container split-layout">
-            <div class="text-col">
+            <div class="text-col reveal delay-100">
                 <h2><?= $data['headline'] ?> <span class="highlight"><?= $data['highlight_headline'] ?></span></h2>
                 <div class="content-text">
                     <p><?= nl2br($data['text']) ?></p>
                 </div>
             </div>
-            <div class="image-col">
+            <div class="image-col reveal delay-200">
                 <div class="image-wrapper green-bg">
                     <img src="<?= $data['image'] ?>" alt="Profile Picture">
                 </div>
@@ -116,7 +116,7 @@ function renderServices($section)
 
             <!-- Sticky Header Area -->
             <div class="services-header-sticky">
-                <div class="header-content-inner">
+                <div class="header-content-inner reveal">
                     <h2><?= $data['headline'] ?> <span class="highlight"><?= $data['highlight_headline'] ?></span></h2>
                     <p class="intro-text"><?= $data['intro_text'] ?></p>
                 </div>
@@ -195,7 +195,7 @@ function renderTestimonials($section)
             </div>
 
             <!-- Swiper Container -->
-            <div class="swiper testimonials-swiper">
+            <div class="swiper testimonials-swiper reveal delay-200">
                 <div class="swiper-wrapper">
                     <?php foreach ($data['items'] as $item): ?>
                         <div class="swiper-slide">
@@ -225,12 +225,12 @@ function renderPricing($section)
     ?>
     <section class="pricing-section" id="pricing">
         <div class="container">
-            <div class="section-header center">
+            <div class="section-header center reveal">
                 <h2><?= $data['headline'] ?> <span class="highlight"><?= $data['highlight_headline'] ?></span></h2>
                 <p class="intro-text"><?= $data['intro_text'] ?></p>
             </div>
 
-            <div class="swiper pricing-swiper">
+            <div class="swiper pricing-swiper reveal delay-200">
                 <div class="swiper-wrapper">
                     <?php foreach ($data['cards'] as $card): ?>
                         <div class="swiper-slide">
@@ -274,11 +274,11 @@ function renderContact($section)
     ?>
     <section class="contact-section" id="contact">
         <div class="container">
-            <div class="section-header center">
+            <div class="section-header center reveal">
                 <h2><?= $data['headline'] ?> <span class="highlight"><?= $data['highlight_headline'] ?></span></h2>
             </div>
             <div class="split-layout">
-                <div class="form-col">
+                <div class="form-col reveal delay-200">
                     <form action="send_mail.php" method="POST" class="contact-form">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Vor- und Nachname" required>
@@ -296,7 +296,7 @@ function renderContact($section)
                         <button type="submit" class="btn btn-primary full-width"><?= $data['button_text'] ?></button>
                     </form>
                 </div>
-                <div class="map-col">
+                <div class="map-col reveal delay-300">
                     <!-- Static map placeholder image or iframe -->
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.7667823528654!2d14.2885!3d48.2495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDE0JzU4LjIiTiAxNMKwMTcnMTguNiJF!5e0!3m2!1sde!2sat!4v1634567890123!5m2!1sde!2sat"

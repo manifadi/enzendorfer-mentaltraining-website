@@ -203,6 +203,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', updateHeader);
 
+    // --- Generic Scroll Reveal Animation ---
+    const revealElements = document.querySelectorAll('.reveal, .reveal-fade');
+    
+    if (revealElements.length > 0) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Run once
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.15, // Trigger when 15% visible
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    }
+
     // --- Email Status Notification ---
     const urlParams = new URLSearchParams(window.location.search);
     const status = urlParams.get('status');
